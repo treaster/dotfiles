@@ -1,0 +1,18 @@
+[merge]
+	conflictstyle = diff3
+[color]
+	ui = true
+[alias]
+	view = log --graph --oneline --decorate --boundary --all HEAD
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[core]
+	editor = vim
+[diff]
+    tool = vimdiff
+[merge]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[difftool "vimdiff"]
+    # Diff two files, local file editable and remote file readonly.
+	cmd = vim -R -f -d -c \"wincmd l\" -c 'set noreadonly' -c 'cd \"$GIT_PREFIX\"' \"$LOCAL\" \"$REMOTE\"
