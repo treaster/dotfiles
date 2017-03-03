@@ -5,6 +5,7 @@
 [alias]
 	view = log --graph --oneline --decorate --boundary --all HEAD
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lgn = log --color -n 1 --name-only
 [core]
 	editor = vim
 [diff]
