@@ -2,10 +2,11 @@
 
 set -eux
 
-rsync -r ~/dotfiles/.bash_profile ~
-rsync -r ~/dotfiles/.gitconfig ~
-rsync -r ~/dotfiles/.vim ~
-rsync -r ~/dotfiles/.vimrc ~
+SCRIPT_DIR=$(dirname $0)
+rsync -r "${SCRIPT_DIR}/.bash_profile" ~
+rsync -r "${SCRIPT_DIR}/.gitconfig" ~
+rsync -r "${SCRIPT_DIR}/.vim" ~
+rsync -r "${SCRIPT_DIR}/.vimrc" ~
 
 read -p 'git username (e.g. John Smith): ' GIT_USERNAME
 read -p 'git email (e.g. johnsmith@email.com): ' GIT_USEREMAIL
