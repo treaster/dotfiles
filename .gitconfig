@@ -17,3 +17,5 @@
 [difftool "vimdiff"]
     # Diff two files, local file editable and remote file readonly.
 	cmd = vim -R -f -d -c \"wincmd l\" -c 'set noreadonly' -c 'cd \"$GIT_PREFIX\"' \"$LOCAL\" \"$REMOTE\"
+[push]
+	default = matching
