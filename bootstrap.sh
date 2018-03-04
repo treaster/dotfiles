@@ -3,6 +3,7 @@
 set -eux
 
 SCRIPT_DIR=$(dirname $0)
+rsync -r "${SCRIPT_DIR}/.bashrc" ~
 rsync -r "${SCRIPT_DIR}/.bash_profile" ~
 rsync -r "${SCRIPT_DIR}/.gitconfig" ~
 rsync -r "${SCRIPT_DIR}/.vim" ~

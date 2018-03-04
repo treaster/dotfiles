@@ -40,3 +40,6 @@ alias ls='ls --color=auto'
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+LS_COLORS='ow=01;34;40'
+export LS_COLORS
