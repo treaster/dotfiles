@@ -1,6 +1,5 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
-export PATH=$PATH:/usr/local/go/bin
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -43,3 +42,8 @@ fi
 
 LS_COLORS='ow=01;34;40'
 export LS_COLORS
+
+export GIT_ROOT="$HOME/src/source"
+export GOROOT=$HOME/go
+export GOPATH=${GIT_SOURCE}/go
+export PATH=$HOME/bin:$HOME/.local/bin:${GOROOT}/bin:$PATH
