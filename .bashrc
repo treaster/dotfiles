@@ -43,7 +43,7 @@ fi
 LS_COLORS='ow=01;34;40'
 export LS_COLORS
 
-export GIT_ROOT="$HOME/src/source"
+export GIT_ROOT="{{GITROOT}}"
 export GOROOT=$HOME/go
-export GOPATH=${GIT_SOURCE}/go
+export GOPATH=${GIT_ROOT}/go
 export PATH=$HOME/bin:$HOME/.local/bin:${GOROOT}/bin:$PATH
