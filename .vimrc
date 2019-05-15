@@ -28,3 +28,4 @@ set nowrap
 set ruler
 
 hi MatchParen cterm=bold ctermbg=yellow ctermfg=blue
+let g:go_fmt_command = "goimports"
