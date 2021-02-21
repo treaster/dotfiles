@@ -26,6 +26,8 @@ imap <Help> <nop>
 set hls
 set nowrap
 set ruler
+set splitright
+set splitbelow
 
 hi MatchParen cterm=bold ctermbg=yellow ctermfg=blue
 let g:go_fmt_command = "goimports"
