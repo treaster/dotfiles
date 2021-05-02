@@ -1,6 +1,5 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -11,6 +10,9 @@ HISTCONTROL=ignoredups:ignorespace
 
 # append to the history file, don't overwrite it
 shopt -s histappend
+
+# Prevent bash from escaping $ for vars on tab completion
+shopt -s direxpand
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100000
@@ -43,7 +45,8 @@ fi
 LS_COLORS='ow=01;34;40'
 export LS_COLORS
 
-export GIT_ROOT="{{GITROOT}}"
+export GROOT="{{GROOT}}"
 export GOROOT=$HOME/go
-export GOPATH=${GIT_ROOT}/go
+export GOPATH=${GROOT}/go
 export PATH=$HOME/bin:$HOME/.local/bin:${GOROOT}/bin:$PATH
+go env -w GO111MODULE=auto
