@@ -14,6 +14,9 @@ shopt -s histappend
 # Prevent bash from escaping $ for vars on tab completion
 shopt -s direxpand
 
+# Make grep search into hidden/dot files/directories. (and maybe other programs too)
+shopt -s dotglob
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100000
 HISTFILESIZE=200000

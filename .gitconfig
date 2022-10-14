@@ -6,6 +6,10 @@
 	view = log --graph --oneline --decorate --boundary --all HEAD
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lgn = log --color -n 1 --name-only
+    sync = !tmp_branch="$(git rev-parse --abbrev-ref HEAD)" && git checkout "$1" && git pull && git checkout "${tmp_branch}" && git rebase "$1"
+
+    checkuot = checkout
+    brnach = branch
 [core]
 	editor = vim
 [diff]
