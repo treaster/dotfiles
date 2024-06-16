@@ -10,6 +10,7 @@
 
     checkuot = checkout
     brnach = branch
+    balefire = "!f() { git filter-branch --index-filter \"git rm --cached --ignore-unmatch $1\" --tag-name-filter cat -- --all ; }; f $1"
 [core]
 	editor = vim
 [diff]
