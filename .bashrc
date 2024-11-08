@@ -1,5 +1,3 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -48,12 +46,9 @@ fi
 LS_COLORS='ow=01;34;40'
 export LS_COLORS
 
-export GROOT="{{GROOT}}"
 export GOROOT=$HOME/go
-export GOPATH=${GROOT}/go
 
 # TODO: Fill in private repos appropriately
 # export GOPRIVATE="github.com/[USERNAME]"
 
 export PATH=$HOME/bin:$HOME/.local/bin:${GOROOT}/bin:$PATH
-go env -w GO111MODULE=auto
