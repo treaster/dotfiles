@@ -11,6 +11,7 @@
     checkuot = checkout
     brnach = branch
     balefire = "!f() { git filter-branch --index-filter \"git rm --cached --ignore-unmatch $1\" --tag-name-filter cat -- --all ; }; f $1"
+    deleteremote = push origin --delete 
 [core]
 	editor = vim
 [diff]
@@ -26,3 +27,5 @@
 	default = current
 [url "ssh://git@github.com/treaster/"]
 	insteadOf = https://github.com/treaster/
+[init]
+	defaultBranch = main
