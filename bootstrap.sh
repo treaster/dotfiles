@@ -42,5 +42,16 @@ Host github.com
 EOT
 fi
 
+# Configure NetworkManager to use Google DNS servers.
+nmcli connection show
+conn_name="$(nmcli -g NAME connection show --active | head -n 1)"
+nmcli con mod "${conn_name}" ipv4.dns "1.1.1.1 8.8.8.8"
+sudo nmcli con mod "${conn_name}" ipv4.dns "1.1.1.1 8.8.8.8"
+sudo nmcli con mod "${conn_name}" ipv4.ignore-auto-dns yes
+sudo nmcli connection modify "${conn_name}" ipv6.dns "2001:4860:4860::8888 2001:4860:4860::8844"
+sudo nmcli connection modify "${conn_name}" ipv6.ignore-auto-dns yes
+sudo nmcli connection up "${conn_name}"
+
 
 echo "Done. Now run 'source ~/.bashrc' to refresh your environment."
+ 
