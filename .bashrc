@@ -6,6 +6,9 @@ EDITOR=vim
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoredups:ignorespace
 
+# Ignore ctrl-d killing the shell
+set -o ignoreeof
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -47,8 +50,9 @@ LS_COLORS='ow=01;34;40'
 export LS_COLORS
 
 export GOROOT=$HOME/go
+export GOPATH=$HOME/gopath
 
 # TODO: Fill in private repos appropriately
 # export GOPRIVATE="github.com/[USERNAME]"
 
-export PATH=$HOME/bin:$HOME/.local/bin:${GOROOT}/bin:$PATH
+export PATH="$HOME/bin:$HOME/.local/bin:${GOROOT}/bin:${GOPATH}/bin:$PATH"
